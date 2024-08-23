@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="row card-container justify-content-center align-items-center gap-5">
+    {% for meal in meals %}
+    <div class="card col-lg-3 col-sm-3 col-md-3">
+        <img src="{{meal.strMealThumb}}" class="card-img-top" alt="{{meal.strMeal}}">
+        <div class="card-body">
+            <h5 class="card-title">{{meal.strMeal}}</h5>
+            <p class="card-text">This is {{meal.strMeal}}, one of the best dishes that you can't miss</p>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
